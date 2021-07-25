@@ -4,7 +4,6 @@
 	<title>3D Generalist | Anshul</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<link rel="icon" type="image/png" href="favicon.ico"/>
-	<script src="foo.js"></script>
 </head>
 <body>
 
@@ -22,7 +21,7 @@
 
 
 
-	<div class="section_one" id="home">
+	<div class="section_one" id="home" loop>
 		<video  poster="" id="bgvid" playsinline autoplay muted loop>
 			<source src="https://drive.google.com/uc?export=download&id=1YERSORM-dD57Mrvq7Xi8M0BdhkGq5Fmi" type="video/mp4">
 		</video>
@@ -31,6 +30,20 @@
 			<p class="anshul">ANSHUL</p>
 			<p class="generalist">3D GENERALIST</p>
 		</div>
+		<div class="section_one_link_icons">
+			<a href="https://www.artstation.com/anshul94" target="_blank" class="section_one_links_artstation">
+				<div class="section_one_artstation_imgs">
+					<img width="50px" height="50px" class="artstation_white" src="artstation_white.png">
+				</div>
+				<p class="artstation_text">ARTSTATION</p>
+			</a>
+			<a href="https://www.linkedin.com/in/anshulsark" target="_blank" class="section_one_links_linkedin">
+				<div class="section_one_linkedin_imgs">
+					<img width="50px" height="50px" class="linkedin_white" src="linkedin_white.png">
+				</div>
+				<p class="linkedin_text">LINKEDIN</p>
+			</a>
+		</div>
 		<div class="section_one_overlay"></div>
 	</div>
 
@@ -38,21 +51,42 @@
 	<div class="section_two" >
 		<div class="skill_box" id="skills">
 			<div class="skill">
-				<p>SKILLS <br> & <br> EXPERIENCE</p>
+				<p>SKILLS</p>
 			</div>
 			<div class="skill_space"></div>
 			<div class="skill_details">
 				<div class="skill_details_box_main">
 					<div class="skill_another_detail_box">
-						<div class="skill_detail_box1"></div>
-						<div class="skill_detail_box2"></div>
-						<div class="skill_detail_box3"></div>
-						<div class="skill_detail_box4"></div>
+						<div class="skill_detail_box1">
+							<div class="skill_boxes_inside_detail">
+								<div class="skill_icon"><img src="3ds_max.png"></div>
+								<div class="skill_text"><p>3DS MAX</p></div>
+							</div>
+						</div>
+						<div class="skill_detail_box2">
+							<div class="skill_boxes_inside_detail">
+								<div class="skill_icon"><img src="vray2.png"></div>
+								<div class="skill_text"><p>VRAY</p></div>
+							</div>
+						</div>
+						<div class="skill_detail_box3">
+							<div class="skill_boxes_inside_detail">
+								<div class="skill_icon"><img src="s_painter.png"></div>
+								<div class="skill_text"><p>SUBSTANCE PAINTER</p></div>
+							</div>
+						</div>
+						<div class="skill_detail_box4">
+							<div class="skill_boxes_inside_detail">
+								<div class="skill_icon"><img src="aftereffects.png"></div>
+								<div class="skill_text"><p>AFTER EFFECTS</p></div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 
 
 	<div class="section_three" id="portfolio">
@@ -76,46 +110,64 @@
 
 
 		<div class="port_box">
+			<!-- modal starts here -->
+			<div class="modal" id="modal_1">
+				<div class="modal_child">
+					<div class="modal_close_button" id="modal_1_close" onclick="closeModal_1('modal_1');event.stopPropagation()">
+						<div class="modal_close_button_child">
+							<div class="leftright"></div>
+							<div class="rightleft"></div>
+							<label class="modal_close_cross">close</label>	
+						</div>
+					</div>
+					<div class="modal_left_arrow" onclick="slideshow_minus();"></div>
+					<div class="modal_big_img" id="modal_img_show"></div>
+					<div class="modal_right_arrow" onclick="slideshow_plus();"></div>
+				</div>
+			</div>
+			<!-- modal ends here -->
+
+
 			<div class="port_box_one">
-				<div>
+				<div onclick="openModal_1('modal_1','1');">
 					<div class="port_box_img" id="port_img_1"></div>
-					<h3 class="port_box_title">text</h3>
+					<h3 class="port_box_title">BALLROOM</h3>
 				</div>
-				<div>
+				<div onclick="openModal_1('modal_1','2');">
 					<div class="port_box_img" id="port_img_2"></div>
-					<h3 class="port_box_title">text</h3>
+					<h3 class="port_box_title">INTERIOR</h3>
 				</div>
-				<div>
+				<div onclick="openModal_1('modal_1','3');">
 					<div class="port_box_img" id="port_img_3"></div>
-					<h3 class="port_box_title">text</h3>
+					<h3 class="port_box_title">EXTERIOR</h3>
 				</div>
 			</div>
 			<div class="port_box_one">
-				<div>
+				<div onclick="openModal_1('modal_1','4');">
 					<div class="port_box_img" id="port_img_4"></div>
-					<h3 class="port_box_title">text</h3>
+					<h3 class="port_box_title">APACHE</h3>
 				</div>
-				<div>
+				<div onclick="openModal_1('modal_1','5');">
 					<div class="port_box_img" id="port_img_5"></div>
-					<h3 class="port_box_title">text</h3>
+					<h3 class="port_box_title">GRAMOPHONE</h3>
 				</div>
-				<div>
+				<div onclick="openModal_1('modal_1','6');">
 					<div class="port_box_img" id="port_img_6"></div>
-					<h3 class="port_box_title">text</h3>
+					<h3 class="port_box_title">R2D2</h3>
 				</div>
 			</div>
 			<div style="margin-bottom: 50px;" class="port_box_one">
-				<div>
+				<div onclick="openModal_1('modal_1','7');">
 					<div class="port_box_img" id="port_img_7"></div>
-					<h3 class="port_box_title">text</h3>
+					<h3 class="port_box_title">CRATE</h3>
 				</div>
-				<div>
+				<div onclick="openModal_1('modal_1','8');">
 					<div class="port_box_img" id="port_img_8"></div>
-					<h3 class="port_box_title">text</h3>
+					<h3 class="port_box_title">CAMERA</h3>
 				</div>
-				<div>
+				<div onclick="openModal_1('modal_1','9');">
 					<div class="port_box_img" id="port_img_9"></div>
-					<h3 class="port_box_title">text</h3>
+					<h3 class="port_box_title">......</h3>
 				</div>
 			</div>
 		</div>
@@ -125,11 +177,16 @@
 
 
 
+
+
+
 	<div class="section_four" id="about">
-		<div class="section_four_box">
-			<div class="section_four_image"><h2>ABOUT ME</h2></div>
-			<div class="section_four_space"></div>
-			<div class="section_four_about_me_box">asdfasdfsa</div>
+		<div style="z-index: 999;" id="particle-js">
+			<div class="section_four_box">
+				<div class="section_four_image"><h2>ABOUT ME</h2></div>
+				<div class="section_four_space"></div>
+				<div class="section_four_about_me_box">asdfasdfsa</div>
+			</div>
 		</div>
 	</div>
 
@@ -153,6 +210,95 @@
 	</div>
 
 
+
+
+<script>
+	var images = [];
+	var img_counter = 0;
+	var in_intervalID = 0;
+function openModal_1(open_id, project_no){
+	document.getElementById(open_id).style.display = "block";
+	in_intervalID = setInterval(function(){fade_in_modal(open_id)}, 20);	
+	document.querySelector("body").style.overflow = 'hidden';
+	project_chooser(project_no);
+}
+	var in_opacity = 0.1;
+function fade_in_modal(abcd){
+	var modal = document.getElementById(abcd);
+
+	if (in_opacity < 1) {
+		in_opacity = in_opacity + 0.1;
+		modal.style.opacity = in_opacity;
+	}else{
+		clearInterval(in_intervalID);
+	}
+}
+function closeModal_1(close_id){
+	document.getElementById(close_id).style.display = "none";
+	document.querySelector("body").style.overflow = 'visible';
+	images = [];
+	remove_img();
+	img_counter = 0;
+	in_intervalID = setInterval(fade_out_modal, 30);	
+}
+function fade_out_modal(){
+	var modal = document.getElementById("modal_1");
+
+	if (in_opacity > 0) {
+		in_opacity = in_opacity - 0.1;
+		modal.style.opacity = in_opacity;
+	}else{
+		clearInterval(in_intervalID);
+	}
+}
+
+
+function project_chooser(project_no) {
+	if (project_no == 1) {
+		images[0] = '101.jpg';
+		images[1] = '102.jpg';
+		images[2] = '101.jpg';
+		slideshow();
+	}else if (project_no == 2) {
+		images[0] = '104.jpg';
+		images[1] = '105.jpg';
+		images[2] = '106.png';
+		slideshow();
+	}else if (project_no == 3) {
+	}else if (project_no == 4) {
+	}else if (project_no == 5) {
+	}else if (project_no == 6) {
+	}else if (project_no == 7) {
+	}else if (project_no == 8) {
+	}else if (project_no == 9) {
+	}
+}
+
+
+function slideshow(){
+	document.getElementById("modal_img_show").style.backgroundImage = "url(" + images[img_counter] + ")";
+
+}
+
+function slideshow_minus(){
+	if (img_counter > 0) {
+	img_counter = img_counter - 1;
+	slideshow();
+	}
+}
+
+function slideshow_plus(){
+	if (img_counter < (images.length-1)) {
+		img_counter = img_counter + 1;
+		slideshow();
+	}
+}
+
+function remove_img() {
+	document.getElementById("modal_img_show").style.backgroundImage = "none";
+}
+
+</script>
 
 
 </body>

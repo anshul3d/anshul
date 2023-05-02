@@ -190,8 +190,8 @@ body {
 
 .section_one > video {
   position: absolute;
-  top: 50%; 
-  left: 50%;
+  top: 62%; 
+  left: 45%;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   min-width: 100%; 
@@ -205,8 +205,8 @@ body {
 
 .section_one > img {
   position: absolute;
-  top: 50%; 
-  left: 50%;
+  top: 62%; 
+  left: 45%;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   min-width: 100%; 
